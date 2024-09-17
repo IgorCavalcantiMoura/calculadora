@@ -1,0 +1,97 @@
+/* Definindo o estilo básico para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte usada no texto */
+    display: flex; /* Usando Flexbox para centralizar a calculadora */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da viewport */
+    background-color: #f4f4f4; /* Cor de fundo */
+    margin: 0; /* Remove margens padrão */
+    background-image: url("https://plus.unsplash.com/premium_photo-1674331713979-3c1cb3d7b4e5?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    cursor: url('../img/snow2.svg'), default;
+}
+
+/* Estilo para o contêiner da calculadora */
+.calculadora {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);/* Sombra ao redor da calculadora */
+    display: grid; /* Utilizando grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Define 4 colunas iguais */
+    grid-gap: 10px; /* Espaço entre as células da grid */
+    width: 300px; /* Largura da calculadora */
+    backdrop-filter: blur(10px); /* O efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para suporte a webkit */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    color: white;
+}
+
+/* Estilo do campo de entrada (visor) */
+input {
+    grid-column: span 4; /* O visor ocupa todas as 4 colunas */
+    height: 40px; /* Altura do visor */
+    font-size: 24px; /* Tamanho da fonte */
+    text-align: right; /* Alinha o texto à direita */
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid #ddd; /* Borda ao redor do visor */
+    border-radius: 5px; /* Cantos arredondados */
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* O efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para suporte a webkit */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    cursor: url('../img/snow2.svg'), default;
+}
+
+/* Estilo para os botões */
+button {
+    width: 100%; /* O botão ocupa 100% da largura da célula da grid */
+    height: 50px; /* Altura dos botões */
+    font-size: 20px; /* Tamanho da fonte nos botões */
+    background: rgba(255, 255, 255, 0.1);
+    border: none; /* Remove bordas padrão */
+    border-radius: 5px; /* Cantos arredondados nos botões */
+    cursor: url('../img/snow2.svg'), default;
+    transition: background-color 0.3s; /* Transição suave ao mudar a cor de fundo */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* O efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px); /* Para suporte a webkit */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+}
+
+/* Cor de fundo ao passar o mouse sobre os botões */
+button:hover {
+    background: rgba(255, 255, 255, 0.3); /* Torna o fundo mais visível no hover */
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+    backdrop-filter: blur(15px); /* Aumenta o desfoque no hover */
+    -webkit-backdrop-filter: blur(15px); /* Para navegadores WebKit */ 
+}
+
+/* Cor de fundo ao clicar nos botões */
+button:active {
+    background: rgba(255, 255, 255, 0.5); /* Torna o fundo ainda mais opaco */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); /* Sombra reduzida para simular que o botão está pressionado */
+    transform: translateY(2px); /* "Afunda" o botão levemente ao clicar */
+    backdrop-filter: blur(5px); /* Diminui o desfoque ao clicar */
+    -webkit-backdrop-filter: blur(5px); /* Para navegadores WebKit */
+}
+
+.snowflake {
+    position: absolute;
+    color: #fff; /* Cor dos flocos de neve */
+    pointer-events: none; /* Para que os flocos de neve não interfiram nos cliques */
+    animation: fall 5s linear infinite; /* Animação para os flocos de neve caírem */
+}
+
+@keyframes fall {
+    0% {
+        top: -10%;
+        opacity: 1;
+    }
+    100% {
+        top: 110%;
+        opacity: 0;
+    }
+}
+

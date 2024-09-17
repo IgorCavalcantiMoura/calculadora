@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <!-- Contêiner principal da calculadora -->
+    <div class="calculadora">
+        <!-- Campo de texto desabilitado, utilizado para exibir os valores -->
+        <input type="text" id="visor" disabled />
+        
+        <!-- Botões da calculadora, cada um chamando uma função correspondente ao ser clicado -->
+        <button onclick="adicionarNumero('1')" aria-label="Número um">1</button>
+        <button onclick="adicionarNumero('2')" aria-label="Número dois">2</button>
+        <button onclick="adicionarNumero('3')" aria-label="Número três">3</button>
+        <button onclick="adicionarOperador('+')" aria-label="Operador de adição">+</button>
+
+        <button onclick="adicionarNumero('4')" aria-label="Número quatro">4</button>
+        <button onclick="adicionarNumero('5')" aria-label="Número cinco">5</button>
+        <button onclick="adicionarNumero('6')" aria-label="Número seis">6</button>
+        <button onclick="adicionarOperador('-')" aria-label="Operador de subtração">-</button>
+
+        <button onclick="adicionarNumero('7')" aria-label="Número sete">7</button>
+        <button onclick="adicionarNumero('8')" aria-label="Número oito">8</button>
+        <button onclick="adicionarNumero('9')" aria-label="Número nove">9</button>
+        <button onclick="adicionarOperador('*')" aria-label="Operador de multiplicação">*</button>
+
+        <button onclick="adicionarNumero('0')" aria-label="Número zero">0</button>
+        <button id="snowButton" onclick="limparVisor()" aria-label="Limpar visor">C</button> <!-- Limpa o visor -->
+        <button onclick="calcular()" aria-label="Resultado">=</button> <!-- Realiza o cálculo -->
+        <button onclick="adicionarOperador('/')" aria-label="operador de divisão">/</button>
+    </div>
+
+    <script src="../dist/calculadora.js"></script> <!-- Link para o arquivo JavaScript compilado -->
+</body>
+</html>
